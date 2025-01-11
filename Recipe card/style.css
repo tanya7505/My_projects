@@ -46,26 +46,110 @@ body{
     overflow:auto;
     border-radius: 5px;
     box-shadow: 15px 10px 5px rgba(15, 15, 15, 0.232);
-
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
 }
+
+#left-ease-in{
+    animation-name: left;
+}
+
+#right-ease-in{
+     animation-name: right ;
+}
+
+#top-ease-in{
+    animation-name: top;
+}
+
+#bottom-ease-in{
+    animation-name: bottom;
+}
+
+@keyframes left {
+  from{
+        margin-left: -100px;
+  }
+  to{
+        margin-left: 0px;
+  }
+}
+
+@keyframes right {
+    from{
+          margin-right: -140px;
+    }
+    to{
+        margin-right: 0px;
+    }
+  }
+  @keyframes top {
+    from{
+          margin-top: -100px;
+    }
+    to{
+         margin-top: 0px;
+    }
+  }
+
+  @keyframes bottom {
+    from{
+          margin-bottom: -180px;
+    }
+    to{
+          margin-bottom: 0px;
+    }
+  }
+
+
+
 
 .card-items{
     font-size: x-small;
     display: grid;
     grid-template-columns: auto;
-
+   
 }
 
 .food-photo{
     float:right;
+    
 }
 
 .card-heading{
     font-size: 20px;
    text-decoration: underline;
+   animation-name: text;
+   animation-duration: 1s;
+   animation-delay: 1.5s;
+   animation-timing-function: ease-in;
 }
 
 .ingredients{
     margin-left: 16px;
-   
+
+}
+
+@keyframes text{
+    from{
+        margin-left: -70px;
+
+    }
+    to{
+        margin-left: 0px;
+    }
+}
+
+
+
+@media screen and (max-width:1050px){
+    .container{
+        width: 500px;
+        height: 1710px;
+    }
+
+    .cards-container{
+        display: grid;
+  grid-template-columns: auto;
+    }
 }
